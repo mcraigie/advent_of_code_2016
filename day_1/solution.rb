@@ -1,6 +1,6 @@
 instructions = File.read(ARGV[0]).split(", ")
 
-x_dist = y_dist = current_direction = 0
+x = y = current_direction = 0
 
 instructions.each do |instruction|
 	if instruction[0] == 'R'
@@ -13,14 +13,14 @@ instructions.each do |instruction|
 
 	case current_direction
 	when 0
-		y_dist += delta
+		y += delta
 	when 180
-		y_dist -= delta
+		y -= delta
 	when 90
-		x_dist += delta
+		x += delta
 	when 270
-		x_dist -= delta
+		x -= delta
 	end
 end
 
-puts final_distance = y_dist.abs + x_dist.abs
+puts y.abs + x.abs
