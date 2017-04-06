@@ -6,19 +6,18 @@ class Cursor
 	end
 
 	def move(instruction)
+		new_x = @x
+		new_y = @y
+
 		case instruction
 		when "U"
-			new_x = @x
 			new_y = @y - 1
 		when "D"
-			new_x = @x
 			new_y = @y + 1
 		when "L"
 			new_x = @x - 1
-			new_y = @y
 		when "R"
 			new_x = @x + 1
-			new_y = @y
 		end
 
 		if @keypad_map[new_y][new_x]
