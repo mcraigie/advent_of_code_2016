@@ -1,9 +1,9 @@
 def odds(segments)
-	segments.select.with_index{|_,i| (i+1) % 2 == 1}
+	segments.select.with_index{|e,i| (i+1) % 2 == 1}
 end
 
 def evens(segments)
-	segments.select.with_index{|_,i| (i+1) % 2 == 0}
+	segments.select.with_index{|e,i| (i+1) % 2 == 0}
 end
 
 def segment(address)
